@@ -9,4 +9,11 @@ struct Node{
   int data;
 };
 
+typedef struct StrNode StrNode;
+struct StrNode{
+  StrNode *left;
+  StrNode *right;
+  char* data;
+};
+
 #endif // _NODE_H

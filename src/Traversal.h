@@ -2,7 +2,8 @@
 #define _TRAVERSAL_H
 #include "Node.h"
 
-void inOrderTreeTraversal(Node *node);
+void _inOrderTreeTraversal(Node *node, void (*print)(Node *node));
+// void inOrderTreeTraversal(Node *node);
 void postOrderTreeTraversal(Node *node);
 void preOrderTreeTraversal(Node *node);
 #endif // _TRAVERSAL_H

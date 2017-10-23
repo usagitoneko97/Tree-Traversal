@@ -2,12 +2,15 @@
 #include "Node.h"
 #include <stdio.h>
 
-void inOrderTreeTraversal(Node *node){
+
+
+void _inOrderTreeTraversal(Node *node, void (*print)(Node *node)){
   if(node->left!=NULL)
-    inOrderTreeTraversal(node->left);
-  printf("data = %d\n", node->data);
+    _inOrderTreeTraversal(node->left, print);
+  // printf("data = %d\n", node->data);
+  print(node);
   if(node->right!=NULL)
-    inOrderTreeTraversal(node->right);
+    _inOrderTreeTraversal(node->right, print);
 }
 
 void postOrderTreeTraversal(Node *node){
